@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+<h1 class="text-center">All Transactions</h1>
+<div class="text-center">
+  <a class="btn btn-danger" href="/transactions/newexpense">Add Expense</a>
+  <a class="btn btn-success" href="/transactions/newincome">Add Income</a>
+</div>
+
+<% for (let transaction of transactions){ %>
+<div class="card mb-3 mx-auto mt-3" style="width: 18rem">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="card-body">
+        <h5 class="card-title"><%= transaction.amount %></h5>
+        <p><%= transaction.category %></p>
+        <a class="btn btn-primary" href="/transactions/<%= transaction._id %> "
+          >View</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>

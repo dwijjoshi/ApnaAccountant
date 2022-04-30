@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Give and Borrow</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/give-borrow1.css" />
+    <link rel="icon" href="favicon.ico" />
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=nkBvGtkNv8Q-pBSuy2oQSXWMoixgMTETc4tfezoappFvnxbq5aGuQfyomtNH6nmObC_LBPDY3ifGR3U6K0uBI3C6Vktn07QOlsRmTzjBuuLGHFkQYHa7y9ih-ZOOREe5gRpeMdEUK4FBvtSpqVVh4bZsZ5cxYy5JY-nHIxmlOYBDRIZXb5lcyDokLufH63xwevGIr3ed8pSzLQ1O9gJ4gOOoKdqQTF9Z3yhDuuQPhQm_13P53HZNiurlANiV0S2ZbGctEN3Tq_6yq7Pr-4HL7FslFuhpWg4TnFaqYibThyYjPRSnmtGH27KAhIOFJtFXQsYIbfuxkKo8A1TUielCYShc48f3VDD-PKDYLLZC6Kl8vF4AEtVH1gtwbO0WW3FZ1K53riIDCbPK0DjhOdRu6KZuS1OwGL9lx5FwYp38sjL9e3t3bQ5RkNYNzvmZznrmUl2sUB6kAyA39ZQpOy-HfB6AlfwQ3wWAWpRr-xlhtXTGvALKZFzVck2K484xIXabrK56H3VBt38Eky_-iv_xKXJMVSZW5ZsVhEcSftgwnIR54erHw-OIphTqQYBf_wld8m0PSj5FLVwgRkU1VUEQYVK0rP_nAO43ZrlSz9OvccxDgyIvq86V7wxtUB35Fm_Pd3JvnzDnrXXOM2nfMETXhAjGqkNCg6IlvNSHI3qVUqkhLlEs4XEZITu2RKysGlnKGcK-N3ao8uANo3E2IoQ3PuDUHgwvLnJwD4ogCOcO7xZNyCVFFF3Hcklkzq-ZZ_w5xtxlXLkOO7Ya4z4FHr3O04W4XqYjcQEjgRi0rm7SVInrZH18HYsmBZX4TR-Ipx58HYL8v74D7xuBk3cXnldDNj-JhaoiDaBkltVAXiWdRosMy3BI1IQlgi-UK7zmb6-b6ES0P0pyKQiC0x1MNYz76cPWWAJaGunIWhpAr4dnLagJMnE-lQPbbU84o5JAh2SgSxrRrFGoFiOfvSYjY_Yi6TZeRMGlqPpivP-Zb9sVXdJioicgi79wCLypDA3_GBTw8bCv-UsVEnqn5muwKrlQr0NH8n6xBbB2yUIhW662V7ombiCOc-tSBlPlG3h1443tK3MSdYx0qcodrVYRaL0Ovi5ppcYKXobXoYvtnxQTWSf_W4r-f4GOIkKRokenGzdBcE_VsgZASIgSg98ynwuGumWAO0Y1ZeEFykKcED0Iv_Stn23WxRF_sTkj5xIWdEtPH3Pm-vevfLtv3twZwgx45xUgqDw_dCYAWM8IJPJe4ye3uUwuHHgoKmeddoKUIh3ZHIb6zchN9e0yvaQWAgmFHv651zVYkHNEVyJYfcLnb4w"
+      nonce="0291086678809eba1f6660f87f6dccd9"
+      charset="UTF-8"
+    ></script>
+  </head>
+
+  <% layout('layouts/boilerplate') %>
+
+  <body class="mx-auto">
+    <div class="gve-brw text-center">
+      <h2>Give and Borrow</h2>
+    </div>
+    <center class="mx-auto">
+      <table border="4">
+        <thead>
+          <tr>
+            <th>Enter Name</th>
+            <td>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter name"
+                style="text-align: center"
+              />
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Enter Amount</th>
+            <td>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="Enter amount"
+                style="text-align: center"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <td>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                placeholder="Enter email"
+                style="text-align: center"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <td>
+              <select name="category" id="category">
+                <option value="Option">Option</option>
+                <option value="Give">Give</option>
+                <option value="Borrow">Borrow</option>
+              </select>
+            </td>
+          </tr>
+          <tr id="btna">
+            <td colspan="2">
+              <input
+                type="button"
+                name="button"
+                id="btn"
+                value="Add"
+                onclick="AddRow()"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table border="4" id="show">
+        <thead>
+          <tr>
+            <th>Enter name</th>
+            <th>Enter amount</th>
+            <th>Date</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+      </table>
+    </center>
+
+    <script>
+      var list1 = [];
+      var list2 = [];
+      var list3 = [];
+      var list4 = [];
+
+      var n = 1;
+      var x = 0;
+
+      function AddRow() {
+        var AddRown = document.getElementById("show");
+        var NewRow = AddRown.insertRow(n);
+
+        list1[x] = document.getElementById("name").value;
+        list2[x] = document.getElementById("amount").value;
+        list3[x] = document.getElementById("date").value;
+        list4[x] = document.getElementById("category").value;
+
+        var cel1 = NewRow.insertCell(0);
+        var cel2 = NewRow.insertCell(1);
+        var cel3 = NewRow.insertCell(2);
+        var cel4 = NewRow.insertCell(3);
+
+        cel1.innerHTML = list1[x];
+        cel2.innerHTML = list2[x];
+        cel3.innerHTML = list3[x];
+        cel4.innerHTML = list4[x];
+
+        n++;
+        x++;
+      }
+    </script>
+  </body>
+</html>

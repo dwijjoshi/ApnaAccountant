@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Title>Split Your Bills</Title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 150px 500px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #btn {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="reset"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      input[type="reset"]:hover {
+        background-color: #45a049;
+      }
+
+      .container {
+        border-radius: 15px;
+        background-color: #cababa6f;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h3 style="margin: 0 0 20px 0px">Split Your Money</h3>
+      <form action="/action_page.php">
+        <div class="div0">
+          <label for="name" style="margin: 0 26px 0 0px"
+            >Enter Your Split</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="idname"
+            placeholder="Expanses..."
+          />
+        </div>
+        <br />
+        <div class="div1">
+          <label for="fname" style="margin: 0 5px 0 0px"
+            >Enter Your Amount</label
+          >
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Amount..."
+          />
+        </div>
+
+        <br />
+        <div class="div2">
+          <label for="lname" style="margin: 0 11px 0 0">Number of person</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Number Of Your Team member"
+          />
+        </div>
+        <br />
+        <table border="4" id="show">
+          <thead>
+            <tr>
+              <th>split</th>
+              <th>Amount</th>
+              <th>No. of member</th>
+              <th>split Amount Per person</th>
+            </tr>
+          </thead>
+        </table>
+        <br />
+        <div class="div3" style="margin: 31px 0 8px 3px">
+          <button
+            type="button"
+            id="btn"
+            onclick="AddRow()"
+            style="margin: 0 110px"
+          >
+            Submit
+          </button>
+          <!-- <input type="submit" value="Submit" onclick="AddRow()" style="margin: 0 110px;"> -->
+          <input type="reset" value="Reset" size="1" />
+          <!-- <input type="Clear" value="Clear" size="1"> -->
+        </div>
+      </form>
+    </div>
+
+    <script>
+      var list1 = [];
+      var list2 = [];
+      var list3 = [];
+      var list4 = [];
+
+      var n = 1;
+      var x = 0;
+
+      function AddRow() {
+        var AddRown = document.getElementById("show");
+        var NewRow = AddRown.insertRow(n);
+
+        list1[x] = document.getElementById("name").value;
+        list2[x] = document.getElementById("fname").value;
+        list3[x] = document.getElementById("lname").value;
+        list4[x] =
+          document.getElementById("fname").value /
+          document.getElementById("lname").value;
+
+        var cel1 = NewRow.insertCell(0);
+        var cel2 = NewRow.insertCell(1);
+        var cel3 = NewRow.insertCell(2);
+        var cel4 = NewRow.insertCell(3);
+
+        cel1.innerHTML = list1[x];
+        cel2.innerHTML = list2[x];
+        cel3.innerHTML = list3[x];
+        cel4.innerHTML = list4[x];
+
+        n++;
+        x++;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Amount: <%= transaction.amount %></h5>
+        <p class="card-text">Category: <%= transaction.category %></p>
+        <p class="card-text">Mode: <%= transaction.mode %></p>
+        <p class="card-text">Current: <%= transaction.date %></p>
+      </div>
+
+      <div class="card-body">
+        <a
+          class="card-link btn btn-info"
+          href="/transactions/<%= transaction._id %>/edit"
+          >Edit</a
+        >
+        <form
+          class="d-inline"
+          action="/transactions/<%= transaction._id %>?_method=DELETE "
+          method="POST"
+        >
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+      <a class="btn btn-success" href="/transactions">All transactions</a>
+    </div>
+  </div>
+</div>

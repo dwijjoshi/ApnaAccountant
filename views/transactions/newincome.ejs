@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Income</h1>
+  <div class="col-6 offset-3">
+    <form action="/transactions" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="amount">Amount</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="amount-label">$</span>
+          <input
+            class="form-control"
+            type="text"
+            id="amount"
+            name="transaction[amount]"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="category">Category</label>
+
+        <select
+          class="form-select form-select-sm form-control"
+          aria-label=".form-select-sm example"
+          id="category"
+          name="transaction[category]"
+        >
+          <option selected>Select</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Education">Education</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="mode">Mode</label>
+
+        <select
+          class="form-select form-select-sm form-control"
+          aria-label=".form-select-sm example"
+          id="category"
+          name="transaction[mode]"
+        >
+          <option selected>Select</option>
+          <option value="Online">Online</option>
+          <option value="Offline">Offline</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <button class="btn btn-success">Add Transaction</button>
+      </div>
+    </form>
+    <a href="/transactions">All Transactions</a>
+  </div>
+</div>
+
+<script src=""></script>

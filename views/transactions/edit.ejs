@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+<h1>Edit Transaction</h1>
+<form action="/transactions<%= transaction._id %>?_method=PUT " method="POST">
+  <div>
+    <label for="amount">Amount</label>
+    <input
+      type="text"
+      id="amount"
+      name="transaction[amount]"
+      value="<%= transaction.amount %> "
+    />
+  </div>
+
+  <div>
+    <label for="category">Category</label>
+    <input type="text" id="category" name="transaction[category]" />
+  </div>
+  <button>Update Transaction</button>
+</form>
+<a href="/transactions/<%= transaction._id %> ">Back to transaction</a>

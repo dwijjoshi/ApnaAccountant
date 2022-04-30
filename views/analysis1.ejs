@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis</title>
+
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=207TqLCwyjJwcoVB2TIH5vvJWY33bacIkJIaE_gAE9cgCEK6g4L8JJP-7xPTPbVhAnKuOFcTJGqUCdHILtOLx4tYmo_xYK2I4Sc21rUwbVkpx8F65PE0pRV6al5mcs9Y8xn4SoJcJ7dIi85KmzBHUl6nlo_oOsZnKUBGuuxByuRVkiubnCmlsu3XN2ZvoVDO4VPQI5RRDpe9m7gPtqZQa3Se2r_qrJpZapQlJ8eu4g8O-JV1J4dCvEtj1JhsiyZIGJp_F0mScKq-6l39dN3zbZz4hr61TynRAzzlbHc4mqqdDU8cfc515umgBp-CE-cihzA1qXRtFdtEtIH1a7UOAVWlJ9gSyswVGMXdZZNNKdrOSX1HZyOwCqxTAgycwPmbns72elg2MNMOgJdOuaCzWy4NU85v7CnR3NQW8Y-9q1djJhpU-0f7Lu60-t3Bt2je4VA8DKna5LG7kzlb4loE9ALGAVpJV3h-U51GmCMM_WNLHiGn6oq6Qe_9ucQ3lYY9SPvR3Fyrj0OjIBg6qLi9LW2ien6PbxALVeb5fTF_M0SoZblU6qCctip6caWCWjh8koAiLcrN9BqnHWxHr6__8KTtKBPD8C4DxQwbX1NEoJLPyBwu_M8FR6nu2Q89UEa9BY_D2vnVdK9sSMt4Fv1TtSG42GEs7RKBTcIs3HPZkcOang6ik1PqnH_7ZaCjadzgKOwxn2s2ufqu1tBpIqnYt7o3cZWPer0DWwOJqgHL9XoerjYz017G4IfGRvoVzHgmnNU1tW63hhwWXOuw46lyyyNNytx0EemgluhNJMTaUFT_PtFx5eAwAjSEwQFKh0vV-t68I2TUy0yJB2XhzTajKFgg5LYMsras9dfKtfyg7eWZ6MDUIMv-8ABUFS4BEjgHf83BwBovGZLUlw9WqGmU45v5M7I1lPT_c60twNpQMGbrv5KTsW7ea9PgYMgVeXXySLssECJJZS5QdCQOVRfkfbHwtQCRu2_ToCc4W1SnsT-hp9EmFNduA4DROAl9ohsspx8Qn85x9xf-Xoek96O8lJ300sudtf5UqmncUEc9BorWtZ7iKIPzNVzncqKyJA0paOiHyZ9C_LZkUI2NwF7XSTiB8dpdyz-f7UY_kxxhFEvzNIDK3WSbcYx89uTe2jKtR7OPDVPQ1wt64c3oIDPo8XL8dTzfwnnB6_7Heh1eY68woTVnbi7jkAp02Bf1X7FjhxwTkZHRElbHAsGWpJ8ZerBbuI2Odwhl9qBp7zjDJLYC7HnASD1N5USKvZ9BbCLGSZQYKiB4I0-KArYBpIsTAr41xcDmiJX-yyePZh0zqSY"
+      nonce="dc93e4a9b95d74a6f6d9c47505d55b7a"
+      charset="UTF-8"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function hpmpGraph() {
+        var food = document.hpmpForm.food.value,
+          travel = document.hpmpForm.travel.value,
+          shopping = document.hpmpForm.shopping.value,
+          fuel = document.hpmpForm.fuel.value,
+          education = document.hpmpForm.education.value,
+          ctx = document.getElementById("hpmpratio").getContext("2d");
+        var data = {
+          labels: ["food", "travel", "shopping", "fuel", "education"],
+          datasets: [
+            {
+              data: [food, travel, shopping, fuel, education],
+              backgroundColor: [
+                "#FF6B6B",
+                "#FFD93D",
+                "#6BCB77",
+                "#4D96FF",
+                "#E4508F",
+              ],
+              hoverBackgroundColor: [
+                "#ffb3b3",
+                "#fff0b3",
+                "#c6ebcb",
+                "#b3d2ff",
+                "#f1a7c7",
+              ],
+            },
+          ],
+        };
+        var options = {};
+        var myPieChart = new Chart(ctx, {
+          type: "pie",
+          data: data,
+          options: options,
+        });
+      }
+    </script>
+    <h1>Analysis</h1>
+    <form name="hpmpForm" method="post">
+      food : <input type="text" name="food" value="10" />
+      <br />
+      travel : <input type="text" name="travel" value="35" />
+      <br />
+      shooping : <input type="text" name="shopping" value="20" />
+      <br />
+      fuel : <input type="text" name="fuel" value="15" />
+      <br />
+      education : <input type="text" name="education" value="20" />
+      <br />
+      <button type="button" onclick="hpmpGraph();">Click</button>
+
+      <canvas id="hpmpratio" height="50"></canvas>
+    </form>
+  </body>
+</html>

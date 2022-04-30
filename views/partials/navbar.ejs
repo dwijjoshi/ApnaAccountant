@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apna Accountant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="dropdown">
+        <button id="myBtn" class="dropbtn">
+          <img src="img/icons/icons8-menu-48.png" />
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/">Home</a>
+          <a href="/transactions">Transactions</a>
+          <a href="/splitmoney">Spilt money</a>
+          <a href="/giveborrow">Give and Borrow</a>
+          <a href="/aboutus">About Us</a>
+          <a href="/logout">Sign out</a>
+        </div>
+      </div>
+      <h1 class="header__name">अपना Accountant</h1>
+      <div class="header__menu">
+        <ul>
+          <li>Contact Us</li>
+
+          <a href="/register">Sign In</a>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("myBtn").onclick = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
