@@ -1,0 +1,159 @@
+body {
+  margin: 0px;
+}
+
+.header {
+  margin: 0;
+  width: 100%;
+  height: 82px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  color: white;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
+.header .header__name {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.header .header__menu {
+  position: absolute;
+  right: 10px;
+}
+.header .header__menu ul li {
+  display: inline-block;
+  list-style-type: none;
+  border-radius: 30px;
+  border: 1px solid white;
+  padding: 5px 5px;
+  transform: all 0.2s;
+  text-decoration: none;
+}
+.header .header__menu ul li:hover {
+  color: white;
+  border: 1px solid #efe9e9;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  height: 100vh;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.main_icons {
+  margin: 1rem;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main_icons .div_icons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.main_icons .icons {
+  height: 70px;
+  width: 70px;
+  border: 1px solid palevioletred;
+  border-radius: 30%;
+  margin-bottom: 10px;
+  transition: all 0.1s;
+}
+.main_icons .icons:hover {
+  transform: scale(1.1);
+  box-shadow: 0.2rem 0.5rem 3px #6f9999;
+}
+
+.main__budget ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 20px;
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid black;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 30px;
+  transition: all 0.2;
+}
+.main__budget ul li:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #efe9e9;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
+
+.main__budget input[type="text"] {
+  height: 40px;
+  width: 100px;
+  border-radius: 30px;
+  margin-right: 10px;
+  border: 1px solid gray;
+}
+
+.main__analysis ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 20px;
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid black;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 30px;
+  transition: all 0.2;
+}
+.main__analysis ul li:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #efe9e9;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
+
+#recent_tran {
+  background-color: #270082;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
+
+#analysis {
+  background-color: #270082;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0.2rem 0.2rem 10px burlywood;
+}
